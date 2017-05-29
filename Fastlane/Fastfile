@@ -1,0 +1,15 @@
+fastlane_require 'dotenv/load'
+
+fastlane_version "2.23.0"
+default_platform :ios
+
+APP_ID = "me.colindrake.EasyDiceware"
+CERTS_REPO = ENV["EASY_DICEWARE_CERTS_REPO"]
+
+lane :fetch_dev_cert do
+  match(app_identifier: APP_ID, platform: "ios", type: "development", git_url: CERTS_REPO)
+end
+
+lane :fetch_release_cert do
+  match(app_identifier: APP_ID, platform: "ios", type: "appstore", git_url: CERTS_REPO)
+end
