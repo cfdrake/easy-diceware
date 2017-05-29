@@ -9,6 +9,7 @@
 import UIKit
 
 /// Generates a new passphrase for the user.
+/// In reality, everything is already done and this is merely a nice, quick animation.
 final class GeneratePassphraseViewController: UIViewController {
 
     // MARK: Properties
@@ -42,7 +43,7 @@ final class GeneratePassphraseViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
 
-        Timer.scheduledTimer(withTimeInterval: animationTime, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: animationTime + 0.01, repeats: false) { _ in
             self.performSegue(withIdentifier: "ShowPassphraseViewController", sender: nil)
         }
     }

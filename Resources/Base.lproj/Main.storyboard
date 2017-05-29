@@ -263,6 +263,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="copyLabel" destination="wVt-oM-Qt8" id="m6x-uZ-8pt"/>
                         <outlet property="passphraseLabel" destination="trb-sp-BAe" id="SXg-Zz-1eU"/>
                     </connections>
                 </viewController>

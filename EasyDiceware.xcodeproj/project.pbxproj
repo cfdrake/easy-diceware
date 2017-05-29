@@ -16,6 +16,7 @@
 		3BA3BB2F1EDB8A5300854006 /* SelectWordCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA3BB2E1EDB8A5300854006 /* SelectWordCountViewController.swift */; };
 		3BA3BB311EDB8A5E00854006 /* GeneratePassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA3BB301EDB8A5E00854006 /* GeneratePassphraseViewController.swift */; };
 		3BAEA1CC1EDBAE1C0016B930 /* diceware.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEA1CB1EDBAE1C0016B930 /* diceware.txt */; };
+		3BAEA1CE1EDBB3190016B930 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAEA1CD1EDBB3190016B930 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3BA3BB2E1EDB8A5300854006 /* SelectWordCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordCountViewController.swift; sourceTree = "<group>"; };
 		3BA3BB301EDB8A5E00854006 /* GeneratePassphraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePassphraseViewController.swift; sourceTree = "<group>"; };
 		3BAEA1CB1EDBAE1C0016B930 /* diceware.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = diceware.txt; sourceTree = "<group>"; };
+		3BAEA1CD1EDBB3190016B930 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA3BB1A1EDB834300854006 /* AppDelegate.swift */,
+				3BAEA1CD1EDBB3190016B930 /* AppState.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				3B3EF6F61EDB96F600380415 /* PassphraseViewController.swift in Sources */,
 				3B3EF6F91EDBA8DF00380415 /* Diceware.swift in Sources */,
 				3BA3BB311EDB8A5E00854006 /* GeneratePassphraseViewController.swift in Sources */,
+				3BAEA1CE1EDBB3190016B930 /* AppState.swift in Sources */,
 				3BA3BB2F1EDB8A5300854006 /* SelectWordCountViewController.swift in Sources */,
 				3BA3BB1B1EDB834300854006 /* AppDelegate.swift in Sources */,
 			);

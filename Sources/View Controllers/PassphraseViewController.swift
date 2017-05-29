@@ -14,18 +14,15 @@ final class PassphraseViewController: UIViewController {
     // MARK: Properties
 
     @IBOutlet var passphraseLabel: UILabel?
-
-    var passphrase: String? {
-        didSet {
-            guard isViewLoaded else { return }
-            self.passphraseLabel?.text = passphrase
-        }
-    }
+    @IBOutlet var copyLabel: UILabel?
 
     // MARK: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Fill out passphrase.
+        passphraseLabel?.text = AppState.sharedState.passphrase
 
         // Add gesture for tap-to-copy.
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
@@ -36,8 +33,10 @@ final class PassphraseViewController: UIViewController {
 
     func tapped() {
         // Copy passphrase to system clipboard.
-        guard let passphrase = passphrase else { return }
+        guard let passphrase = AppState.sharedState.passphrase else { return }
+
         UIPasteboard.general.string = passphrase
+        copyLabel?.text = "👍🏻 copied!"
     }
 
     @IBAction func tappedDone() {
@@ -46,6 +45,7 @@ final class PassphraseViewController: UIViewController {
 
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { _ in
+            AppState.sharedState.reset()
             self.navigationController?.popToRootViewController(animated: true)
         })
 

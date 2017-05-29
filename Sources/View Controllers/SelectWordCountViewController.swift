@@ -26,6 +26,7 @@ final class SelectWordCountViewController: UIViewController {
 
     @IBAction func sliderValueChanged(slider: UISlider) {
         words = Int(slider.value)
+        AppState.sharedState.length = words
     }
 
 }
