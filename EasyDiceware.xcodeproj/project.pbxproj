@@ -15,6 +15,7 @@
 		3BA3BB251EDB834300854006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA3BB231EDB834300854006 /* LaunchScreen.storyboard */; };
 		3BA3BB2F1EDB8A5300854006 /* SelectWordCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA3BB2E1EDB8A5300854006 /* SelectWordCountViewController.swift */; };
 		3BA3BB311EDB8A5E00854006 /* GeneratePassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA3BB301EDB8A5E00854006 /* GeneratePassphraseViewController.swift */; };
+		3BAEA1CC1EDBAE1C0016B930 /* diceware.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3BAEA1CB1EDBAE1C0016B930 /* diceware.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3BA3BB261EDB834300854006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA3BB2E1EDB8A5300854006 /* SelectWordCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWordCountViewController.swift; sourceTree = "<group>"; };
 		3BA3BB301EDB8A5E00854006 /* GeneratePassphraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePassphraseViewController.swift; sourceTree = "<group>"; };
+		3BAEA1CB1EDBAE1C0016B930 /* diceware.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = diceware.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA3BB211EDB834300854006 /* Assets.xcassets */,
+				3BAEA1CB1EDBAE1C0016B930 /* diceware.txt */,
 				3BA3BB261EDB834300854006 /* Info.plist */,
 				3BA3BB231EDB834300854006 /* LaunchScreen.storyboard */,
 				3BA3BB1E1EDB834300854006 /* Main.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAEA1CC1EDBAE1C0016B930 /* diceware.txt in Resources */,
 				3BA3BB251EDB834300854006 /* LaunchScreen.storyboard in Resources */,
 				3BA3BB221EDB834300854006 /* Assets.xcassets in Resources */,
 				3BA3BB201EDB834300854006 /* Main.storyboard in Resources */,
