@@ -143,6 +143,7 @@
 				TargetAttributes = {
 					3BA3BB161EDB834300854006 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = D225BPT86F;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -314,12 +315,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D225BPT86F;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.colindrake.EasyDiceware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d3a189b4-6a1e-41b1-9a34-59d462f6f23e";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development me.colindrake.EasyDiceware";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -328,12 +330,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = D225BPT86F;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.colindrake.EasyDiceware;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "63d3e959-6be7-4761-b774-15dd1383f089";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.colindrake.EasyDiceware";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
