@@ -11,6 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: Static Properties
+
+    enum NotificationType: String {
+        case enteringBackground, leavingBackground
+    }
+
     // MARK: Properties
 
     var window: UIWindow?
@@ -19,6 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        NotificationCenter.default.post(name: Notification.Name(NotificationType.enteringBackground.rawValue), object: nil)
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        NotificationCenter.default.post(name: Notification.Name(NotificationType.leavingBackground.rawValue), object: nil)
     }
 
 }

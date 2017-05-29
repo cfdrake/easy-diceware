@@ -21,12 +21,26 @@ final class PassphraseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Subscribe to notifications.
+        NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: Notification.Name(AppDelegate.NotificationType.enteringBackground.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(leftBackground), name: Notification.Name(AppDelegate.NotificationType.leavingBackground.rawValue), object: nil)
+
         // Fill out passphrase.
         passphraseLabel?.text = AppState.sharedState.passphrase
 
         // Add gesture for tap-to-copy.
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
         passphraseLabel?.addGestureRecognizer(tapRecognizer)
+    }
+
+    // MARK: Notifications
+
+    @objc func enteredBackground() {
+        passphraseLabel?.alpha = 0
+    }
+
+    @objc func leftBackground() {
+        passphraseLabel?.alpha = 1
     }
 
     // MARK: Actions
