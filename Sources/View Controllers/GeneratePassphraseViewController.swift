@@ -35,7 +35,7 @@ final class GeneratePassphraseViewController: UIViewController {
 
         // Animate progress bar ;)
         guard let progressViewBackground = progressViewBackground else { return }
-        let animationTime = 3.0
+        let animationTime = 2.0
 
         progressViewConstraint?.constant = progressViewBackground.frame.width
 
