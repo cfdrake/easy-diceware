@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vj0-2s-C3J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vj0-2s-C3J">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,7 +73,7 @@
                                 <rect key="frame" x="337" y="36" width="22" height="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="PnA-K5-Fwv" kind="presentation" id="6ZF-ra-4gV"/>
+                                    <segue destination="ZfC-xL-aMM" kind="show" id="XY9-UK-gFq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,23 +107,62 @@
             </objects>
             <point key="canvasLocation" x="1152.8" y="646.32683658170924"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="JKO-tu-jgb">
+        <!--Navigation Controller-->
+        <scene sceneID="9LK-dj-JqW">
             <objects>
-                <viewController id="PnA-K5-Fwv" sceneMemberID="viewController">
+                <navigationController id="ZfC-xL-aMM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yKl-b1-wcb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="InA-Tm-KVO" kind="relationship" relationship="rootViewController" id="Lw4-0f-tkY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpK-Ep-9Ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="1354"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="roa-wa-U55">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="InA-Tm-KVO" customClass="InfoViewController" customModule="EasyDiceware" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LFn-dd-9hm"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bxg-Rb-wyj"/>
+                        <viewControllerLayoutGuide type="top" id="trH-9r-ruP"/>
+                        <viewControllerLayoutGuide type="bottom" id="do8-Ye-wnO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XoZ-s3-wlc">
+                    <view key="view" contentMode="scaleToFill" id="uMX-Pq-rcq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juk-NF-app">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="juk-NF-app" firstAttribute="top" secondItem="trH-9r-ruP" secondAttribute="bottom" id="AO4-sV-XcO"/>
+                            <constraint firstAttribute="trailing" secondItem="juk-NF-app" secondAttribute="trailing" id="TFF-hD-S00"/>
+                            <constraint firstItem="do8-Ye-wnO" firstAttribute="top" secondItem="juk-NF-app" secondAttribute="bottom" id="rE0-Lx-RaR"/>
+                            <constraint firstItem="juk-NF-app" firstAttribute="leading" secondItem="uMX-Pq-rcq" secondAttribute="leading" id="zxS-HB-QRx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Info" id="7C2-Xb-BAK">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="1nW-fk-TQX">
+                            <connections>
+                                <action selector="closeWithSender:" destination="InA-Tm-KVO" id="2aw-fr-v65"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="juk-NF-app" id="GEn-yv-ddN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="plQ-gy-fNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCe-iY-Pvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="1361"/>
+            <point key="canvasLocation" x="1886" y="1353"/>
         </scene>
         <!--Generate Passphrase View Controller-->
         <scene sceneID="rry-QW-Vim">
