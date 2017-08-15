@@ -17,7 +17,7 @@ final class AppState {
 
     // MARK: Properties
 
-    let diceware = Diceware()
+    let diceware = DicewareGenerator()
 
     var length: Int? {
         didSet {

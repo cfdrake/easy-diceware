@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B3EF6F61EDB96F600380415 /* PassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6F51EDB96F600380415 /* PassphraseViewController.swift */; };
-		3B3EF6F91EDBA8DF00380415 /* Diceware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6F81EDBA8DF00380415 /* Diceware.swift */; };
+		3B3EF6F91EDBA8DF00380415 /* DicewareGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3EF6F81EDBA8DF00380415 /* DicewareGenerator.swift */; };
 		3BA3BB1B1EDB834300854006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA3BB1A1EDB834300854006 /* AppDelegate.swift */; };
 		3BA3BB201EDB834300854006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA3BB1E1EDB834300854006 /* Main.storyboard */; };
 		3BA3BB221EDB834300854006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA3BB211EDB834300854006 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3B3EF6F51EDB96F600380415 /* PassphraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassphraseViewController.swift; sourceTree = "<group>"; };
-		3B3EF6F81EDBA8DF00380415 /* Diceware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diceware.swift; sourceTree = "<group>"; };
+		3B3EF6F81EDBA8DF00380415 /* DicewareGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DicewareGenerator.swift; sourceTree = "<group>"; };
 		3BA3BB171EDB834300854006 /* EasyDiceware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyDiceware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA3BB1A1EDB834300854006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BA3BB1F1EDB834300854006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		3B3EF6F71EDBA8D500380415 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3B3EF6F81EDBA8DF00380415 /* Diceware.swift */,
+				3B3EF6F81EDBA8DF00380415 /* DicewareGenerator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3EF6F61EDB96F600380415 /* PassphraseViewController.swift in Sources */,
-				3B3EF6F91EDBA8DF00380415 /* Diceware.swift in Sources */,
+				3B3EF6F91EDBA8DF00380415 /* DicewareGenerator.swift in Sources */,
 				3BA3BB311EDB8A5E00854006 /* GeneratePassphraseViewController.swift in Sources */,
 				3BEF69481EFA129B004D7FF6 /* InfoViewController.swift in Sources */,
 				3BAEA1CE1EDBB3190016B930 /* AppState.swift in Sources */,

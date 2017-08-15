@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents the whole diceware system.
-final class Diceware {
+final class DicewareGenerator {
 
     // MARK: Properties
 
