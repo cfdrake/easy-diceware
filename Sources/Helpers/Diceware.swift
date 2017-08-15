@@ -13,7 +13,20 @@ final class Diceware {
 
     // MARK: Properties
 
-    var dicewareEntries: [String: String] = [:]  // Hash table for quick searching.
+    lazy var dicewareEntries: [String: String] = {
+        let dicewarePath = Bundle.main.path(forResource: "diceware", ofType: "txt")!
+        guard let dicewareLines = try? String(contentsOfFile: dicewarePath).components(separatedBy: "\n") else {
+            fatalError("Could not load diceware entries")
+        }
+
+        var dicewareEntries = [String: String]()
+        dicewareLines.filter { $0.characters.count > 0 }.forEach { (line: String) in
+            let components = line.components(separatedBy: "\t")
+            dicewareEntries[components[0]] = components[1]
+        }
+
+        return dicewareEntries
+    }()
 
     // MARK: Helpers
 
@@ -25,25 +38,9 @@ final class Diceware {
         return (0..<n).map { _ in return throwDie() }
     }
 
-    func buildDictionary() {
-        let dicewarePath = Bundle.main.path(forResource: "diceware", ofType: "txt")!
-        guard let dicewareLines = try? String(contentsOfFile: dicewarePath).components(separatedBy: "\n") else {
-            fatalError("Could not load diceware entries")
-        }
-
-        dicewareLines.filter { $0.characters.count > 0 }.forEach { (line: String) in
-            let components = line.components(separatedBy: "\t")
-            self.dicewareEntries[components[0]] = components[1]
-        }
-    }
-
     // MARK: Public Interface
 
     func randomPassphraseOfLength(_ length: Int) -> String {
-        if dicewareEntries.count == 0 {
-            buildDictionary()
-        }
-
         let numbers = (0..<length).map { _ in return throwNDice(n: 5).map({ String($0) }).joined() }
         return numbers.map({ num in dicewareEntries[num]! }).joined(separator: " ")
     }
