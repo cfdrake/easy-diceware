@@ -13,7 +13,7 @@ final class AppState {
 
     // MARK: Static Properties
 
-    static let sharedState = AppState()
+    static let shared = AppState()
 
     // MARK: Properties
 

@@ -26,14 +26,14 @@ final class SelectWordCountViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AppState.sharedState.length = words
+        AppState.shared.length = words
     }
 
     // MARK: Actions
 
     @IBAction func sliderValueChanged(slider: UISlider) {
         words = Int(slider.value)
-        AppState.sharedState.length = words
+        AppState.shared.length = words
     }
 
 }
