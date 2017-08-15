@@ -24,7 +24,7 @@ final class GeneratePassphraseViewController: UIViewController {
         super.viewDidLoad()
 
         // Animate randomized emojis.
-        Timer.scheduledTimer(withTimeInterval: 0.15, repeats: true) { _ in
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             guard let emojiLabel = self.emojiLabel else { return }
             emojiLabel.text = self.randomEmoji() + self.randomEmoji() + "\n" + self.randomEmoji() + self.randomEmoji()
         }
@@ -35,7 +35,7 @@ final class GeneratePassphraseViewController: UIViewController {
 
         // Animate progress bar ;)
         guard let progressViewBackground = progressViewBackground else { return }
-        let animationTime = 2.0
+        let animationTime = 1.4
 
         progressViewConstraint?.constant = progressViewBackground.frame.width
 
