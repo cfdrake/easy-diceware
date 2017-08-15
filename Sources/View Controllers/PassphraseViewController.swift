@@ -24,8 +24,8 @@ final class PassphraseViewController: UIViewController {
         super.viewDidLoad()
 
         // Subscribe to notifications.
-        NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: Notification.Name(AppDelegate.NotificationType.enteringBackground.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(leftBackground), name: Notification.Name(AppDelegate.NotificationType.leavingBackground.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(leftBackground), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
 
         // Fill out passphrase.
         passphraseLabel?.text = AppState.sharedState.passphrase
