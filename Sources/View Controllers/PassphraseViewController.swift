@@ -16,6 +16,8 @@ final class PassphraseViewController: UIViewController {
     @IBOutlet var passphraseLabel: UILabel?
     @IBOutlet var copyLabel: UILabel?
 
+    var cachedPassword: String?
+
     // MARK: UIViewController
 
     override func viewDidLoad() {
@@ -36,11 +38,13 @@ final class PassphraseViewController: UIViewController {
     // MARK: Notifications
 
     @objc func enteredBackground() {
-        passphraseLabel?.alpha = 0
+        cachedPassword = passphraseLabel?.text
+        passphraseLabel?.text = "👀"
     }
 
     @objc func leftBackground() {
-        passphraseLabel?.alpha = 1
+        passphraseLabel?.text = cachedPassword
+        cachedPassword = nil
     }
 
     // MARK: Actions
